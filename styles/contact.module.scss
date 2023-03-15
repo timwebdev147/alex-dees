@@ -1,0 +1,174 @@
+$green: #2a8375;
+$blue: #315494;
+$form_text: #08204a;
+
+.form_container{
+    display: flex;
+    // border: 1px solid black;
+    width: 100%;
+    height: 1000px;
+
+    .bg_container{
+        width: 50%;
+        height: 100%;
+        // border: 1px solid black;
+        background-image: url('../public/images/contact2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .form_container{
+        background-color: #e1e7ec;
+        width: 50%;
+        height: 100%;
+        // border: 1px solid black;
+            >div{
+              width: 100%;
+              height: 100%;
+              // border: 1px solid black;
+            //   background-color: $blue;
+              padding: 100px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+          
+              >div{
+                color: $form_text;
+                font:normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+                height: 180px;
+                // border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h2{
+                  font-size: 40px;
+                  font-weight: 400;
+                  color: $blue;
+                  // margin-bottom: 20px;
+                }
+                div{
+                  opacity: 0.9;
+                  line-height: 2.5;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
+              }
+          
+              form{
+                width: 100%;
+                height: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                // border: 1px solid black;
+                // flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                div{
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  &.half_width{
+                      width: 48%;
+                  }
+                  label{
+                    color: $form_text;
+                    text-transform: capitalize;
+                    margin-left: 5px;
+                  }
+                  input{
+                    width: 100%;
+                    padding: 0 5px;
+                    height: 50px;
+                    background-color: transparent;
+                    border: 1px solid $form_text;
+                    &::placeholder{
+                      color: $form_text;
+                      margin-left: 5px;
+                    }
+                  }
+                  textarea{
+                    width: 100%;
+                    height: 120px;
+                    background-color: transparent;
+                    border: 1px solid $form_text;
+                    padding: 0 5px;
+                    &::placeholder{
+                      color: $form_text;
+                    }
+                  }
+                }
+                button{
+                  padding: 15px 25px;
+                  margin: auto;
+                  cursor: pointer;
+                  text-transform: capitalize;
+                  font-size: medium;
+                  background-color: $form_text;
+                  color: white;
+                  border: 1px solid $form_text;
+                }
+              }
+          
+            }
+    }
+}
+
+.nav_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: $blue;
+    a{
+      border: 1px solid white;
+      width: 150px;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+      transition: 0.5s;
+      text-transform: capitalize;
+      &:hover{
+        background-color: white;
+        color: $blue;
+        transition: 0.5s;
+      }
+    }
+  }
+  
+  .footer{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    padding: 50px 0;
+    align-items: center;
+    >div{
+      height: 100%;
+      width: 300px;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1{
+        font-size: larger;
+        width: 250px;
+        text-align: center;
+        color: rgb( 8,32,74);
+      }
+      p{
+        font-size: 14px;
+        color: rgb( 8,32,74);
+        line-height: 1.79em;
+        opacity: 0.7;
+      }
+      div{
+        opacity: 0.7;
+        line-height: 1.79em;
+        display: inherit;
+        flex-direction: inherit;
+        align-items: inherit;
+        font-size: medium;
+        color: rgb( 8,32,74);
+      }
+    }
+  }
