@@ -60,8 +60,12 @@ export default function Home() {
       <main>
 
       <div className={styles.first_container}>
+
+        <div className={styles.bg_container}>
+
+        </div>
         
-        <div>
+        <div className={styles.welcome_container}>
           <h1>
           Welcome to Alex D's Cleaning Services
           </h1>
@@ -80,7 +84,12 @@ export default function Home() {
       </div>
 
       <div className={styles.second_container}>
-        <div>
+
+        <div className={styles.bg_container}>
+
+        </div>
+
+        <div className={styles.about_container}>
             <div>
               <h3>More About Us</h3>
               <p>

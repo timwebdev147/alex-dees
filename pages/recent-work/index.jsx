@@ -34,34 +34,34 @@ function testimonials(params) {
 
       const images = [
         {
-            url: '/../public/images/testimonials1_before.png'
+            url: '/images/testimonials1_before.png'
         },
         {
-            url: '/../public/images/testimonials1_after.png'
+            url: '/images/testimonials1_after.png'
         },
         {
-            url: '/../public/images/testimonials2_before.png'
+            url: '/images/testimonials2_before.png'
         },
         {
-            url: '/../public/images/testimonials2_after.png'
+            url: '/images/testimonials2_after.png'
         },
         {
-            url: '/../public/images/testimonials3_before.png'
+            url: '/images/testimonials3_before.png'
         },
         {
-            url: '/../public/images/testimonials3_after.png'
+            url: '/images/testimonials3_after.png'
         },
         {
-            url: '/../public/images/testimonials4_before.png'
+            url: '/images/testimonials4_before.png'
         },
         {
-            url: '/../public/images/testimonials4_after.png'
+            url: '/images/testimonials4_after.png'
         },
         {
-            url: '/../public/images/testimonials5_before.png'
+            url: '/images/testimonials5_before.png'
         },
         {
-            url: '/../public/images/testimonials5_after.png'
+            url: '/images/testimonials5_after.png'
         },
       ]
 

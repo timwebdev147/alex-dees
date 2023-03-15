@@ -50,32 +50,32 @@ function Services(params) {
         {
             title: 'Home cleanings',
             paragraph: 'If you are moving into or out of your apartment or house, we can easily lessen the stress of your move by making sure your home is ready for the next family.',
-            image: '/../public/images/home_cleaning2.jpg'
+            image: '/images/home_cleaning2.jpg'
         },
         {
             title: 'Vacation rentals and Air bnb\'s cleanings',
             paragraph: '',
-            image: '/../public/images/rentals_cleaning.jpg'
+            image: '/images/rentals_cleaning.jpg'
         },
         {
             title: 'Recurring cleanings',
             paragraph: 'Depending on your preference, we offer weekly, bi-weekly, and monthly cleanings. These routine cleanings allow us to efficiently and effectively tackle dirt and dust build up.',
-            image: '/../public/images/recurring_cleaning.jpg'
+            image: '/images/recurring_cleaning.jpg'
         },
         {
             title: 'Window, Carpet and pressure cleanings',
             paragraph: '',
-            image: '/../public/images/pressure_cleaning3.jpg'
+            image: '/images/pressure_cleaning3.jpg'
         },
         {
             title: 'Deep Cleaning',
             paragraph: 'We highly recommend our deep cleaning services as a stand alone service or before a recurring cleaning. This service includes deep cleaning baseboards, deep cleaning bathrooms, and wiping down window blinds just to name a few',
-            image: '/../public/images/deep_cleaning.jpg'
+            image: '/images/deep_cleaning.jpg'
         },
         {
             title: 'Additional services',
             paragraph: 'We also offer additional services such as interior and exterior window cleaning, interior fridge cleaning, oven cleaning, etc that are not normally included in our other services.',
-            image: '/../public/images/additional_services.jpg'
+            image: '/images/additional_services.jpg'
         },
     ]
     
@@ -103,8 +103,8 @@ function Services(params) {
 
             <div className={styles.cards_container}>
                 {
-                    cards.map((card) => (
-                        <div>
+                    cards.map((card, index ) => (
+                        <div key={index}>
                             <Image src={card.image} width='300' height={'300'} ></Image>
                             <h2>{card.title}</h2>
                             <p>{card.paragraph}</p>
