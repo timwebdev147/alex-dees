@@ -88,6 +88,11 @@ function Contact(params) {
 
                             <button>submit</button>
                         </form>
+                        <div className={styles.contact}>
+                        <p>Humble, texas</p>
+                        <a href="mailto:alexdscleaning@gmail.com">alexdscleaning@gmail.com</a>
+                        <a href="tel:+12392343355">(239)-234-3355</a>
+                        </div>
 
                     </div>
                 </div>
@@ -95,9 +100,9 @@ function Contact(params) {
 
 
             <div className={styles.nav_container}>
-        <Link href='/about'>about us</Link>
+        <Link href='/'>home</Link>
         <Link href='/services'>services</Link>
-        <Link href='/testimonials'>testimonials</Link>
+        <Link href='/recent-work'>testimonials</Link>
         <Link href='/contact'>contact us</Link>
       </div>
 

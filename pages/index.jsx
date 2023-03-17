@@ -138,13 +138,13 @@ export default function Home() {
       <div className={styles.fourth_container}>
         <div>
 
-          <div>
+          <div className={styles.head_text} >
             <h2>
             Get a Free Quote Now!
             </h2>
             <p>Questions, comments or requests? Feel free to reach out, we’d love to hear from you.</p>
             <div>
-            <p>Humble, texas</p>
+            <p>Cape Coral, Florida</p>
             <a href="mailto:alexdscleaning@gmail.com">alexdscleaning@gmail.com</a>
             <a href="tel:+12392343355">(239)-234-3355</a>
             </div>
@@ -167,6 +167,11 @@ export default function Home() {
 
                 <button>submit</button>
             </form>
+            <div className={styles.contact}>
+            <p>Cape Coral, Florida</p>
+            <a href="mailto:alexdscleaning@gmail.com">alexdscleaning@gmail.com</a>
+            <a href="tel:+12392343355">(239)-234-3355</a>
+            </div>
 
 
 
@@ -176,7 +181,7 @@ export default function Home() {
       </div>
 
       <div className={styles.nav_container}>
-        <Link href='/about'>about us</Link>
+        <Link href='/'>home</Link>
         <Link href='/services'>services</Link>
         <Link href='/testimonials'>testimonials</Link>
         <Link href='/contact'>contact us</Link>

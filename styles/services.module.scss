@@ -1,7 +1,7 @@
 $green: #2a8375;
 $blue: #315494;
 $form_text: #08204a;
-
+@use 'mediaQueries.modules.scss';
 
 
 .indicator_container{
@@ -15,11 +15,19 @@ $form_text: #08204a;
     align-items: center;
     justify-content: center;
     padding: 150px;
+    @include mediaQueries.for-phone-only{
+      padding: 10px;
+      height: 350px;
+    }
     h1{
         color: $blue;
         margin-bottom: 50px;
         font-weight: 400;
         font-size: 40px;
+        @include mediaQueries.for-phone-only{
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
     }
     p{
         line-height: 2;
@@ -27,36 +35,59 @@ $form_text: #08204a;
         color: rgb(8,32,74);
         font-weight: lighter;
         opacity: 0.7;
+        @include mediaQueries.for-phone-only{
+          font-size: 16px;
+        }
+      }
     }
-}
-
-.cards_container{
-    width: 100%;
+    
+    .cards_container{
+      width: 100%;
     min-height: 300px;
     padding: 150px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #e1e7ec;
+    @include mediaQueries.for-phone-only{
+      flex-direction: column;
+      padding: 10px;
+      padding-top: 50px;
+    }
     div{
-        width: 47%;
-        min-height: 550px;
-        margin-bottom: 6%;
+      width: 47%;
+      min-height: 550px;
+      margin-bottom: 6%;
+      @include mediaQueries.for-phone-only{
+          width: 100%;
+          min-height: 650px;
+        }
         img{
-            width: 100%;
-            height: 55%;
-            margin-bottom: 40px;
+          width: 100%;
+          height: 55%;
+          margin-bottom: 40px;
+          @include mediaQueries.for-phone-only{
+            margin-bottom: 50px;
+            height: 50%;  
+          }
         }
         h2{
-            color: $blue;
-            font-weight: lighter;
-            margin-bottom: 40px;
+          color: $blue;
+          font-weight: lighter;
+          margin-bottom: 40px;
+          @include mediaQueries.for-phone-only{
+            margin-bottom: 20px;
+          }
         }
         p{
-            color: $form_text;
-            font-size: 15px;
-            opacity: 0.7;
-            line-height: 2;
+          color: $form_text;
+          font-size: 15px;
+          opacity: 0.7;
+          line-height: 2;
+          @include mediaQueries.for-phone-only{
+            font-size: 16px;
+            width: 90%;
+          }
         }
     }
 }
@@ -67,6 +98,9 @@ $form_text: #08204a;
     // border: 1px solid black;
     width: 100%;
     height: 1000px;
+    @include mediaQueries.for-phone-only{
+      height: 1200px;
+    }
 
     .bg_container{
         width: 50%;
@@ -76,12 +110,18 @@ $form_text: #08204a;
         background-size: 145%;
         background-position: -80px bottom;
         background-repeat: no-repeat;
+        @include mediaQueries.for-phone-only{
+          display: none;
+        }
     }
     .form_container{
         background-color: $blue;
         width: 50%;
         height: 100%;
         // border: 1px solid black;
+        @include mediaQueries.for-phone-only{
+          width: 100%;
+        }
             >div{
               width: 100%;
               height: 100%;
@@ -91,21 +131,38 @@ $form_text: #08204a;
               display: flex;
               flex-direction: column;
               justify-content: center;
+              @include mediaQueries.for-phone-only{
+                padding: 10px;
+                justify-content: flex-start;
+              }
           
               >div{
                 color: white;
-                font:normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+                font:normal normal normal 14.94px/1.75em worksans-extralight,'work sans',sans-serif;
                 height: 150px;
                 // border: 1px solid black;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                @include mediaQueries.for-phone-only{
+                  height: 200px;
+                  margin-top: 20px;
+                }
                 h2{
                   font-size: 40px;
                   font-weight: 400;
                   color: white;
                   text-align: center;
                   // margin-bottom: 20px;
+                  @include mediaQueries.for-phone-only{
+                    font-size: 25px;
+                  }
+                }
+                p{
+                  
+                  opacity: 0.9;
+                  // margin-bottom: 20px;
+                  font-weight: lighter;
                 }
                 div{
                   opacity: 0.9;
@@ -115,6 +172,19 @@ $form_text: #08204a;
                   align-items: center;
                   font-size: 18px;
                   text-align: center;
+                  span{
+                    display: none;
+                  }
+                  @include mediaQueries.for-phone-only{
+                    opacity: 0.7;
+                    font-size: 15px;
+                    text-align: center;
+                    line-height: 1.5;
+                    font-weight: 100;
+                    span{
+                      display: initial;
+                    }
+                  }
                 }
               }
           
@@ -127,6 +197,9 @@ $form_text: #08204a;
                 // flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+                @include mediaQueries.for-phone-only{
+                  height: 900px;
+                }
                 div{
                   width: 100%;
                   display: flex;
@@ -139,6 +212,9 @@ $form_text: #08204a;
                     text-transform: capitalize;
                     margin-left: 5px;
                     margin-bottom: 5px;
+                    @include mediaQueries.for-phone-only{
+                      margin-bottom: 10px;
+                    }
                   }
                   input{
                     width: 100%;
@@ -146,6 +222,9 @@ $form_text: #08204a;
                     height: 50px;
                     background-color: transparent;
                     border: 1px solid white;
+                    @include mediaQueries.for-phone-only{
+                      height: 70px;
+                    }
                     &::placeholder{
                       color: white;
                       margin-left: 5px;
@@ -160,6 +239,9 @@ $form_text: #08204a;
                     &::placeholder{
                       color: white;
                     }
+                    @include mediaQueries.for-phone-only{
+                      height: 140px;
+                    }
                   }
                 }
                 button{
@@ -172,6 +254,10 @@ $form_text: #08204a;
                   background-color: white;
                   color: $form_text;
                   border: 1px solid white;
+                  @include mediaQueries.for-phone-only{
+                    width: 100%;
+                    font-weight: 400;
+                  }
                 }
               }
           
@@ -181,61 +267,81 @@ $form_text: #08204a;
 
 
 .nav_container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    background-color: #e1e7ec;
-    a{
-      border: 1px solid $blue;
-      width: 150px;
-      padding: 15px 0;
-      text-align: center;
-      color: $blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: #e1e7ec;
+  @include mediaQueries.for-phone-only{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 500px;
+    padding: 10px;
+    padding-top: 50px;
+  }
+  a{
+    border: 1px solid $blue;
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    color: $blue;
+    transition: 0.5s;
+    text-transform: capitalize;
+    &:hover{
+      background-color: $blue;
+      color: white;
       transition: 0.5s;
-      text-transform: capitalize;
-      &:hover{
-        background-color: $blue;
-        color: white;
-        transition: 0.5s;
-      }
+    }
+    @include mediaQueries.for-phone-only{
+      padding: 20px 0;
     }
   }
-  
-  .footer{
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  padding: 50px 0;
+  align-items: center;
+  >div{
+    height: 100%;
+    width: 300px;
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
-    height: 300px;
-    padding: 50px 0;
+    flex-direction: column;
     align-items: center;
-    >div{
-      height: 100%;
-      width: 300px;
-      justify-content: space-between;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h1{
-        font-size: larger;
-        width: 250px;
-        text-align: center;
-        color: rgb( 8,32,74);
+    @include mediaQueries.for-phone-only{
+      width: 100%;
+    }
+    h1{
+      font-size: larger;
+      width: 250px;
+      text-align: center;
+      color: rgb( 8,32,74);
+      @include mediaQueries.for-phone-only{
+        width: 100%;
       }
-      p{
-        font-size: 14px;
-        color: rgb( 8,32,74);
-        line-height: 1.79em;
-        opacity: 0.7;
-      }
-      div{
-        opacity: 0.7;
-        line-height: 1.79em;
-        display: inherit;
-        flex-direction: inherit;
-        align-items: inherit;
-        font-size: medium;
-        color: rgb( 8,32,74);
+    }
+    p{
+      font-size: 14px;
+      color: rgb( 8,32,74);
+      line-height: 1.79em;
+      opacity: 0.7;
+    }
+    div{
+      opacity: 0.7;
+      line-height: 1.79em;
+      display: inherit;
+      flex-direction: inherit;
+      align-items: inherit;
+      font-size: medium;
+      color: rgb( 8,32,74);
+      @include mediaQueries.for-phone-only{
+        justify-content: space-evenly;
+        height: 70px;
       }
     }
   }
+}

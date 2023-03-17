@@ -42,8 +42,9 @@ const Navbar = (props) => {
     ]
 
     const [dropDown, setDropDown] = useState(false)
+    const [clicked, setClicked] = useState(false);
     function onDropDown(){
-        const con = document.getElementsByClassName('listContainer');
+        setClicked(true)
         if(dropDown == false){
             setDropDown(true)
         }
@@ -66,7 +67,7 @@ const Navbar = (props) => {
                     <button className={styles.triggerDropdown} onClick={() => onDropDown()}>
                         <FaBars/>
                     </button>
-                <ul className={dropDown == true ? styles.show: null}>
+                <ul className={dropDown == true  ? styles.show: clicked == true ? styles.hide : null}>
                     {
                         navMenu.map((list) => (
                             <li key={list.id}><Link href={list.link}>{list.menu}</Link></li>

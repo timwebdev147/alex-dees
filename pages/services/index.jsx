@@ -93,7 +93,7 @@ function Services(params) {
 
             <div className={styles.indicator_container}>
                 <h1>Our Cleaning Services</h1>
-                <p>Bluebonnet Cleaning is dedicated to providing 
+                <p>Alex D's Cleaning Services is dedicated to providing 
                     high quality services to the Greater Houston area through 
                     residential and commercial cleaning. Take a look below to find 
                     out what we specialize in and get in touch if you have any additional 
@@ -123,14 +123,14 @@ function Services(params) {
                             Get a Quote!
                             </h2>
                             <div>
-                            <p>Let us know what type of service you are looking for. We are more than happy to help!</p>
+                            <p>Let us know what type of service you are looking for.<span><br /></span> We are more than happy to help!</p>
                             </div>
                         </div>
                     
                         <form action="">
                             {
-                            fields.map((field) => (
-                                <div className={styles[field.class]}>
+                            fields.map((field, index) => (
+                                <div className={styles[field.class]} key={index} >
                                     <label htmlFor="">{field.name}</label>
                                 {
                                 field.type == 'text' || field.type == 'email' ?
@@ -150,9 +150,9 @@ function Services(params) {
 
             
             <div className={styles.nav_container}>
-            <Link href='/about'>about us</Link>
+            <Link href='/'>home</Link>
             <Link href='/services'>services</Link>
-            <Link href='/testimonials'>testimonials</Link>
+            <Link href='/recent-work'>testimonials</Link>
             <Link href='/contact'>contact us</Link>
             </div>
 
