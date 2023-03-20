@@ -183,7 +183,7 @@ export default function Home() {
       <div className={styles.nav_container}>
         <Link href='/'>home</Link>
         <Link href='/services'>services</Link>
-        <Link href='/testimonials'>testimonials</Link>
+        <Link href='/recent-work'>testimonials</Link>
         <Link href='/contact'>contact us</Link>
       </div>
 

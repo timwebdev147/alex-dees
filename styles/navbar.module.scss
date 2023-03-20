@@ -40,7 +40,7 @@ $blue: #315494;
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    height: 0px;
+    height: 70px;
     overflow: hidden;
     
     @include mediaQueries.for-phone-only{
